@@ -157,11 +157,8 @@ var addShuffleLink = function () {
     $('#shuffle-navbar-link') .addClass('nav_item');
 }
 $(document) .ready(function () {
-    $('div.user_suggestions') .remove();
-    var e = document.getElementById('suggs');
-    if (e) {
-        e.parentNode.removeChild(e);
-    }
+    $('div[id$=_right_col]') .remove();
+    
     $(document).on("click",'[id$=_answer_vote_up_cancel_link]',upvoteCancel);
     $(document).on("click",'[id$=_answer_vote_up_link]',upvoteAnswer);
     
